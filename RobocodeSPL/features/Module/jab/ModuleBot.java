@@ -2,11 +2,11 @@ package jab;
 
 import jab.gun.*;
 import jab.module.*;
+import jab.module.Module;
 import jab.movement.*;
 import jab.radar.*;
 import jab.selectEnemy.*;
 import jab.targeting.*;
-
 import java.awt.Color;
 
 /**
