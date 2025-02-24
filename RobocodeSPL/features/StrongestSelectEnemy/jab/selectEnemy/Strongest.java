@@ -11,9 +11,9 @@ import jab.module.SelectEnemy;
  * 
  * @author jab
  */
-public class Weakest extends SelectEnemy {
+public class Strongest extends SelectEnemy {
 
-	public Weakest(Module bot) {
+	public Strongest (Module bot) {
 		super(bot);
 	}
 
