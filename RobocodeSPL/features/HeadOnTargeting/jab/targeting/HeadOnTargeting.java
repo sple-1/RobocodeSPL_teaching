@@ -10,8 +10,10 @@ public class HeadOnTargeting extends Targeting {
 	}
 
 	public void target() {
-		double absoluteBearing = bot.getHeadingRadians() + bot.enemy.bearingRadians;
-		//System.out.println("HT Bearing: " +bot.enemy.bearingRadians + "   AbsoluteBearing: "+absoluteBearing);
-		bot.setTurnGunRightRadians(robocode.util.Utils.normalRelativeAngle(absoluteBearing - bot.getGunHeadingRadians()));
+		if (bot.enemy != null) {
+			double absoluteBearing = bot.getHeadingRadians() + bot.enemy.bearingRadians;
+			//System.out.println("HT Bearing: " +bot.enemy.bearingRadians + "   AbsoluteBearing: "+absoluteBearing);
+			bot.setTurnGunRightRadians(robocode.util.Utils.normalRelativeAngle(absoluteBearing - bot.getGunHeadingRadians()));
+		}
 	}
 }
