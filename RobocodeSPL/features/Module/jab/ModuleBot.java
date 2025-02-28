@@ -26,16 +26,11 @@ public class ModuleBot extends Module {
 	}
 
 	protected void selectBehavior() {
-		radar = selectedRadar;
-		movement = selectedMovement;
-		targeting = selectedTargeting;
-		selectEnemy = selectedSelectEnemy;
-		gun = selectedGun;
+		radar = getSelectedRadar();
+		movement = getSelectedMovement();
+		targeting = getSelectedTargeting();
+		selectEnemy = getSelectedSelectEnemy();
+		gun = getSelectedGun();
 	}
-	
-	Radar selectedRadar = getSelectedRadar();
-	Movement selectedMovement = getSelectedMovement();
-	Targeting selectedTargeting = getSelectedTargeting();
-	SelectEnemy selectedSelectEnemy = getSelectedSelectEnemy();
-	Gun selectedGun = getSelectedGun();
+
 }
