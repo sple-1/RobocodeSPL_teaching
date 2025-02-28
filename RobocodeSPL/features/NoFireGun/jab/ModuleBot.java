@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Gun selectedGun = new CeaseFire(this);
+	protected Gun getSelectedGun() {		
+		return new CeaseFire(this);
+	}
 }

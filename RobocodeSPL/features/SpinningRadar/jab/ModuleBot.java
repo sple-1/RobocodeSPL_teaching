@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Radar selectedRadar = new SpinningRadar(this);
+	protected Radar getSelectedRadar() {		
+		return new SpinningRadar(this);
+	}
 }

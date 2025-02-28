@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Movement selectedMovement = new KeyboardMovement(this);
+	protected Movement getSelectedMovement() {		
+		return new KeyboardMovement(this);
+	}
 }

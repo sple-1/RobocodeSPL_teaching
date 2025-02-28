@@ -32,4 +32,10 @@ public class ModuleBot extends Module {
 		selectEnemy = selectedSelectEnemy;
 		gun = selectedGun;
 	}
+	
+	Radar selectedRadar = getSelectedRadar();
+	Movement selectedMovement = getSelectedMovement();
+	Targeting selectedTargeting = getSelectedTargeting();
+	SelectEnemy selectedSelectEnemy = getSelectedSelectEnemy();
+	Gun selectedGun = getSelectedGun();
 }

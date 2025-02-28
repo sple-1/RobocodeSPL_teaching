@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Targeting selectedTargeting = new LinearTargeting(this);
+	protected Targeting getSelectedTargeting() {		
+		return new LinearTargeting(this);
+	}
 }

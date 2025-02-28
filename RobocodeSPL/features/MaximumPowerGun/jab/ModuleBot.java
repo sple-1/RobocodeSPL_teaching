@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Gun selectedGun = new Maximum(this);
+	protected Gun getSelectedGun() {		
+		return new Maximum(this);
+	}
 }

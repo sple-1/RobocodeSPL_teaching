@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	SelectEnemy selectedSelectEnemy = new Closest(this);
+	protected SelectEnemy getSelectedSelectEnemy() {
+		return new Closest(this); 
+	}
 }

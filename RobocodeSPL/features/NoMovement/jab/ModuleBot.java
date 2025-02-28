@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Movement selectedMovement = new Quiet(this);
+	protected Movement getSelectedMovement() {		
+		return new Quiet(this);
+	}
 }

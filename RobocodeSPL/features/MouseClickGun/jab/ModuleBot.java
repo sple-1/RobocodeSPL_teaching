@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Gun selectedGun = new MouseClickGun(this);
+	protected Gun getSelectedGun() {		
+		return new MouseClickGun(this);
+	}
 }

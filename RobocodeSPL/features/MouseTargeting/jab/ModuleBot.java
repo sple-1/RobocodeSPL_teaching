@@ -1,5 +1,7 @@
 package jab;
 
 public class ModuleBot extends Module {
-	Targeting selectedTargeting = new MouseTargeting(this);
+	protected Targeting getSelectedTargeting() {		
+		return new MouseTargeting(this);
+	}
 }
