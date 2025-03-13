@@ -1,0 +1,14 @@
+delta RandomTargeting requires OnPaintRandom {
+
+	modifies jab.module.Targeting {
+	
+		modifies target() {
+			 // Putar senjata ke arah acak
+			double randomAngle = random.nextDouble() * 2 * Math.PI; // Sudut acak dalam radian
+			double gunTurnAngle = Utils.normalRelativeAngle(randomAngle - bot.getGunHeadingRadians());
+			bot.setTurnGunRightRadians(gunTurnAngle);
+		}
+	
+	}
+
+}
