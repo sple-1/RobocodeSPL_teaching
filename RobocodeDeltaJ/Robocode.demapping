@@ -10,5 +10,8 @@ Cornering:
 Line:
 <decore/Line.decore>
 
+WallTracing:
+<decore/WallTracing.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
