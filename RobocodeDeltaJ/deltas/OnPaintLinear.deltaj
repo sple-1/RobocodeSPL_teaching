@@ -1,0 +1,18 @@
+delta OnPaintLinear {
+
+	modifies jab.module.Targeting {
+		adds int toPaintX = 0;
+		adds int toPaintY = 0;
+
+		adds public void onPaint(Graphics2D g) {
+			if (bot.enemy != null) {
+				g.setColor(Color.red);
+				g.drawOval(toPaintX - 4, toPaintY - 4, 8, 8);
+				g.drawLine(toPaintX - 6, toPaintY, toPaintX + 6, toPaintY);
+				g.drawLine(toPaintX, toPaintY - 6, toPaintX, toPaintY + 6);
+				g.drawLine((int) bot.getX(), (int) bot.getY(), toPaintX, toPaintY);
+			}
+		}
+	}
+	
+}

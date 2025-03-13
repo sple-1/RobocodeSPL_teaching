@@ -1,0 +1,12 @@
+delta MouseTargeting requires OnPaintMouse {
+
+	modifies jab.module.Targeting {
+	
+		modifies target() {
+			double angle = Utils.normalAbsoluteAngle(Math.atan2(aimX - bot.getX(), aimY - bot.getY()));
+			bot.setTurnGunRightRadians(Utils.normalRelativeAngle(angle - bot.getGunHeadingRadians()));
+		}
+	
+	}
+
+}
