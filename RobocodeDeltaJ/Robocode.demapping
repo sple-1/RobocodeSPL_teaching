@@ -6,3 +6,6 @@ SpinningRadar:
 
 ClosestSelectEnemy:
 <decore/ClosestSelectEnemy.decore>
+
+WeakestSelectEnemy:
+<decore/WeakestSelectEnemy.decore>
