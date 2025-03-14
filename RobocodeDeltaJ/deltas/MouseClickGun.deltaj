@@ -13,7 +13,7 @@ delta MouseClickGun {
 			}
 		}
 	
-		modifies listenInput(InputEvent e) {
+		adds public void listenInput(InputEvent e) {
 			if (e instanceof MouseEvent)
 	
 				if (e.getID() == MouseEvent.MOUSE_PRESSED)
