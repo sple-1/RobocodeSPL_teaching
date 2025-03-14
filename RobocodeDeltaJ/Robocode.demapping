@@ -13,3 +13,5 @@ MouseClickGun:
 MaximumPowerGun:
 <decore/MaximumPowerGun.decore>
 
+RandomPowerGun:
+<decore/RandomPowerGun.decore>
