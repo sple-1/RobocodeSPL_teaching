@@ -9,3 +9,6 @@ ClosestSelectEnemy:
 
 WeakestSelectEnemy:
 <decore/WeakestSelectEnemy.decore>
+
+StrongestSelectEnemy:
+<decore/StrongestSelectEnemy.decore>
