@@ -45,3 +45,12 @@ HeadOnTargeting:
 
 RandomTargeting:
 <decore/RandomTargeting.decore>
+
+ClosestSelectEnemy:
+<decore/ClosestSelectEnemy.decore>
+
+WeakestSelectEnemy:
+<decore/WeakestSelectEnemy.decore>
+
+StrongestSelectEnemy:
+<decore/StrongestSelectEnemy.decore>
