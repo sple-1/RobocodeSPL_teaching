@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="RobocodeDeltaJ/src"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/ClosestSelectEnemy"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/Cornering"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/HeadOnTargeting"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/KeyboardMovement"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/Line"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/LinearTargeting"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/MaximumPowerGun"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/Module"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/MouseClickGun"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/MouseRadar"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/MouseTargeting"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/NoFireGun"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/NoMovement"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/SpinningRadar"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/StrongestSelectEnemy"/>
+	<classpathentry kind="src" path="RobocodeSPL/features/WeakestSelectEnemy"/>
+	<classpathentry kind="lib" path="RobocodeDeltaJ/robocode/libs/robocode.jar"/>
+	<classpathentry kind="lib" path="RobocodeSPL/robocode/libs/robocode.jar"/>
+	<classpathentry kind="lib" path="RoboRobo/build/jab.ModuleBot_1.jar"/>
+	<classpathentry kind="lib" path="RoboRobo/build/jab.ModuleTeam_1.jar"/>
+	<classpathentry kind="lib" path="RoboRobo/robocode/libs/robocode.jar"/>
+	<classpathentry kind="output" path="RobocodeDeltaJ/bin"/>
+</classpath>

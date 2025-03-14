@@ -1,6 +1,18 @@
 NoMovement:
 <decore/Quiet.decore>
 
+KeyboardMovement:
+<decore/KeyboardMovement.decore>
+
+Cornering:
+<decore/Cornering.decore>
+
+Line:
+<decore/Line.decore>
+
+WallTracing:
+<decore/WallTracing.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
 
@@ -9,3 +21,15 @@ MouseRadar:
 
 EnemyLockRadar:
 <decore/EnemyLockRadar.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>
+
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+RandomTargeting:
+<decore/RandomTargeting.decore>
