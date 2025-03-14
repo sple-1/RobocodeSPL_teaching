@@ -1,0 +1,44 @@
+delta EnemyLockRadar {
+	
+	modifies jab.module.Radar {
+		
+		adds import jab.module.Module;
+		adds import robocode.Event;
+		adds import robocode.ScannedRobotEvent;
+		adds import robocode.Rules;
+		adds import robocode.util.Utils;
+		
+		adds private byte radarDirection;
+		
+		removes constructor(Module);
+		adds public Radar(Module bot) {
+			this.bot = bot;
+			this.radarDirection = 1;
+		}
+		
+		modifies scan() {
+			if ( bot.getRadarTurnRemaining() == 0.0 ) {
+				bot.setTurnRadarRightRadians(Double.POSITIVE_INFINITY);
+			}
+		}
+		
+		adds public void listen(Event e) {
+			if (e instanceof ScannedRobotEvent) {
+				double angleToEnemy = bot.getHeadingRadians() + bot.enemy.bearingRadians;
+				
+			    double radarTurn = Utils.normalRelativeAngle(angleToEnemy - bot.getRadarHeadingRadians());
+			    double extraTurn = Math.min(Math.atan(90.0 / bot.enemy.distance), Rules.RADAR_TURN_RATE_RADIANS);
+	
+			    if (radarTurn < 0)
+			        radarTurn -= extraTurn;
+			    else
+			        radarTurn += extraTurn;
+			    
+			    bot.setTurnRadarRightRadians(radarTurn);
+				
+			}
+		}
+	
+	}
+	
+}
