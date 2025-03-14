@@ -38,6 +38,13 @@
           <features maxCardinality="1" name="RandomPowerGun"/>
         </groups>
       </features>
+      <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="ClosestSelectEnemy"/>
+          <features maxCardinality="1" name="StrongestSelectEnemy"/>
+          <features maxCardinality="1" name="WeakestSelectEnemy"/>
+        </groups>
+      </features>
     </groups>
   </rootFeature>
 </feature:DEFeatureModel>
