@@ -1,8 +1,26 @@
 NoMovement:
 <decore/Quiet.decore>
 
+KeyboardMovement:
+<decore/KeyboardMovement.decore>
+
+Cornering:
+<decore/Cornering.decore>
+
+Line:
+<decore/Line.decore>
+
+WallTracing:
+<decore/WallTracing.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+MouseRadar:
+<decore/MouseRadar.decore>
+
+EnemyLockRadar:
+<decore/EnemyLockRadar.decore>
 
 NoFireGun:
 <decore/NoFireGun.decore>
@@ -15,3 +33,15 @@ MaximumPowerGun:
 
 RandomPowerGun:
 <decore/RandomPowerGun.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>
+
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+RandomTargeting:
+<decore/RandomTargeting.decore>
