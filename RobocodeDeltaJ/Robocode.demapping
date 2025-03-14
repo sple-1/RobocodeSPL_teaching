@@ -3,3 +3,6 @@ NoMovement:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+MouseRadar:
+<decore/MouseRadar.decore>
