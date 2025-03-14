@@ -1,0 +1,28 @@
+delta RandomTargeting {
+
+	modifies jab.module.Targeting {
+		adds import java.awt.Color;
+		adds import java.awt.Graphics2D;
+		adds import java.awt.event.InputEvent;
+		adds import java.awt.event.MouseEvent;
+		adds import java.util.Random;
+		
+		adds import robocode.util.Utils;
+		adds import jab.module.Module;
+
+		adds private Random random = new Random();
+		
+		modifies target() {
+			//Putar senjata ke arah acak
+			double randomAngle = random.nextDouble() * 2 * Math.PI; //Sudut acak dalam radian
+			double gunTurnAngle = Utils.normalRelativeAngle(randomAngle - bot.getGunHeadingRadians());
+			bot.setTurnGunRightRadians(gunTurnAngle);
+		}
+	
+		adds public void onPaint(Graphics2D g) {
+			g.setColor(Color.ORANGE);
+        	g.drawOval((int) bot.getX() - 50, (int) bot.getY() - 50, 100, 100);
+		}
+	}
+
+}

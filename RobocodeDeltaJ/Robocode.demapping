@@ -15,3 +15,15 @@ WallTracing:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>
+
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+RandomTargeting:
+<decore/RandomTargeting.decore>
