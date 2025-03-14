@@ -1,6 +1,18 @@
 NoMovement:
 <decore/Quiet.decore>
 
+KeyboardMovement:
+<decore/KeyboardMovement.decore>
+
+Cornering:
+<decore/Cornering.decore>
+
+Line:
+<decore/Line.decore>
+
+WallTracing:
+<decore/WallTracing.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
 
