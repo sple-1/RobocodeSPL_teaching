@@ -1,0 +1,32 @@
+delta WallTracing {
+	
+	modifies jab.module.Movement {
+		
+		adds import jab.module.Module;
+		adds import robocode.Event;
+		adds import robocode.HitWallEvent;
+		
+		adds private double moveAmount;
+		
+		removes constructor(Module);
+		adds public Movement(Module bot) {
+			this.bot = bot;
+			this.moveAmount = Math.max(bot.getBattleFieldHeight(), bot.getBattleFieldWidth());
+		}
+	
+		modifies move() {
+			bot.setMaxVelocity(8);
+			bot.turnLeft(bot.getHeading() % 90);
+			bot.setAhead(moveAmount);
+		}
+		
+		adds public void listen(Event e) {
+			if (e instanceof HitWallEvent) {
+				bot.turnRight(90);
+				bot.setAhead(moveAmount);
+			}
+		}
+		
+	}
+	
+}
