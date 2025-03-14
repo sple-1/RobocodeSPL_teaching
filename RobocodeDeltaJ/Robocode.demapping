@@ -22,6 +22,18 @@ MouseRadar:
 EnemyLockRadar:
 <decore/EnemyLockRadar.decore>
 
+NoFireGun:
+<decore/NoFireGun.decore>
+
+MouseClickGun:
+<decore/MouseClickGun.decore>
+
+MaximumPowerGun:
+<decore/MaximumPowerGun.decore>
+
+RandomPowerGun:
+<decore/RandomPowerGun.decore>
+
 LinearTargeting:
 <decore/LinearTargeting.decore>
 

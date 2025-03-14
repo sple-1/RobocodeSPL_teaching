@@ -1,0 +1,13 @@
+delta RandomPowerGun {
+	modifies jab.module.Gun {
+	
+		adds import java.util.Random;
+		
+		adds private Random random = new Random();
+	
+		modifies fire() {
+			bot.bulletPower= random.nextInt(4);
+		}
+	
+	}
+}
