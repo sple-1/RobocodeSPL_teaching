@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <feature:DEFeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:feature="http://deltaecore.org/feature/1.0">
-  <rootFeature minCardinality="1" maxCardinality="1" name="Module">
-    <groups minCardinality="3" maxCardinality="3">
-      <features minCardinality="1" maxCardinality="1" name="Radar">
-        <groups minCardinality="1" maxCardinality="1">
-          <features maxCardinality="1" name="SpinningRadar"/>
-          <features maxCardinality="1" name="MouseRadar"/>
-          <features maxCardinality="1" name="EnemyLockRadar"/>
-        </groups>
-      </features>
+  <rootFeature minCardinality="1" maxCardinality="1" name="Robocode">
+    <groups minCardinality="5" maxCardinality="5">
       <features minCardinality="1" maxCardinality="1" name="Movement">
         <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="NoMovement"/>
@@ -22,27 +15,34 @@
           </features>
         </groups>
       </features>
-      <features minCardinality="1" maxCardinality="1" name="Targeting">
+      <features minCardinality="1" maxCardinality="1" name="Radar">
         <groups minCardinality="1" maxCardinality="1">
-          <features maxCardinality="1" name="LinearTargeting"/>
-          <features maxCardinality="1" name="MouseTargeting"/>
-          <features maxCardinality="1" name="HeadOnTargeting"/>
-          <features maxCardinality="1" name="RandomTargeting"/>
+          <features maxCardinality="1" name="SpinningRadar"/>
+          <features maxCardinality="1" name="MouseRadar"/>
+          <features maxCardinality="1" name="EnemyLockRadar"/>
         </groups>
       </features>
-      <features minCardinality="1" maxCardinality="1" name="Gun">
+      <features minCardinality="1" maxCardinality="1" name="Targeting">
         <groups minCardinality="1" maxCardinality="1">
-          <features maxCardinality="1" name="NoFireGun"/>
-          <features maxCardinality="1" name="MouseClickGun"/>
-          <features maxCardinality="1" name="MaximumPowerGun"/>
-          <features maxCardinality="1" name="RandomPowerGun"/>
+          <features maxCardinality="1" name="MouseTargeting"/>
+          <features maxCardinality="1" name="LinearTargeting"/>
+          <features maxCardinality="1" name="HeadOnTargeting"/>
+          <features maxCardinality="1" name="RandomTargeting"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
         <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="ClosestSelectEnemy"/>
-          <features maxCardinality="1" name="StrongestSelectEnemy"/>
           <features maxCardinality="1" name="WeakestSelectEnemy"/>
+          <features maxCardinality="1" name="StrongestSelectEnemy"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Gun">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="MaximumPowerGun"/>
+          <features maxCardinality="1" name="NoFireGun"/>
+          <features maxCardinality="1" name="MouseClickGun"/>
+          <features maxCardinality="1" name="RandomPowerGun"/>
         </groups>
       </features>
     </groups>

@@ -1,5 +1,5 @@
 delta RandomTargeting {
-
+	
 	modifies jab.module.Targeting {
 		adds import java.awt.Color;
 		adds import java.awt.Graphics2D;
@@ -24,5 +24,5 @@ delta RandomTargeting {
         	g.drawOval((int) bot.getX() - 50, (int) bot.getY() - 50, 100, 100);
 		}
 	}
-
+	
 }

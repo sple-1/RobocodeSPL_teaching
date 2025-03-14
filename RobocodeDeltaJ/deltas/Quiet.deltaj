@@ -1,5 +1,5 @@
-delta Quiet {	
-
+delta Quiet {
+	
 	modifies jab.module.Movement {
 	
 		modifies move() {
@@ -7,5 +7,5 @@ delta Quiet {
 		}
 		
 	}
-
+	
 }

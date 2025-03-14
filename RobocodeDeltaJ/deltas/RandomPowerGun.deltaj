@@ -1,4 +1,5 @@
 delta RandomPowerGun {
+	
 	modifies jab.module.Gun {
 	
 		adds import java.util.Random;
@@ -10,4 +11,5 @@ delta RandomPowerGun {
 		}
 	
 	}
+	
 }

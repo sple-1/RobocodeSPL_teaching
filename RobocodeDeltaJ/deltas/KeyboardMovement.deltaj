@@ -1,5 +1,5 @@
 delta KeyboardMovement {
-
+	
 	modifies jab.module.Movement {
 		
 		adds import java.awt.event.InputEvent;
@@ -70,5 +70,5 @@ delta KeyboardMovement {
 		}
 		
 	}
-
+	
 }

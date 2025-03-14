@@ -1,0 +1,42 @@
+ configuration delta "EnemyLockRadar"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Radar.java>
+		{
+	addClassifierImport(<class:jab.module.Radar>, "jab.module.Module");
+	addClassifierImport(<class:jab.module.Radar>, "robocode.Event");
+	addClassifierImport(<class:jab.module.Radar>, "robocode.ScannedRobotEvent");
+	addClassifierImport(<class:jab.module.Radar>, "robocode.Rules");
+	addClassifierImport(<class:jab.module.Radar>, "robocode.util.Utils");
+	addMember(<class:jab.module.Radar>, "private byte radarDirection;
+");
+	removeMember(<constructor:jab.module.Radar.Radar(Module)>);
+	addMember(<class:jab.module.Radar>, "public Radar(Module bot) {
+			this.bot = bot;
+			this.radarDirection = 1;
+		}
+");
+	modifyStatementListContainer(<method:jab.module.Radar.scan()>, "public void scan() {
+			if ( bot.getRadarTurnRemaining() == 0.0 ) {
+				bot.setTurnRadarRightRadians(Double.POSITIVE_INFINITY);
+			}
+	}
+", "EnemyLockRadar", false);
+	addMember(<class:jab.module.Radar>, "public void listen(Event e) {
+			if (e instanceof ScannedRobotEvent) {
+				double angleToEnemy = bot.getHeadingRadians() + bot.enemy.bearingRadians;
+				
+			    double radarTurn = Utils.normalRelativeAngle(angleToEnemy - bot.getRadarHeadingRadians());
+			    double extraTurn = Math.min(Math.atan(90.0 / bot.enemy.distance), Rules.RADAR_TURN_RATE_RADIANS);
+	
+			    if (radarTurn < 0)
+			        radarTurn -= extraTurn;
+			    else
+			        radarTurn += extraTurn;
+			    
+			    bot.setTurnRadarRightRadians(radarTurn);
+				
+			}
+		}
+");
+	}
+	

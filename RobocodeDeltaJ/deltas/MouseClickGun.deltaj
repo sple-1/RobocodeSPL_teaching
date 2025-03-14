@@ -1,5 +1,5 @@
 delta MouseClickGun {
-
+	
 	modifies jab.module.Gun {
 	
 		adds import java.awt.event.InputEvent;
@@ -28,4 +28,5 @@ delta MouseClickGun {
 				bot.bulletPower = 0;
 		}
 	}
+	
 }

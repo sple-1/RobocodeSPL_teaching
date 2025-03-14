@@ -1,5 +1,5 @@
 delta LinearTargeting {
-
+	
 	modifies jab.module.Targeting {
 		adds import java.awt.Color;
 		adds import java.awt.Graphics2D;
@@ -53,5 +53,5 @@ delta LinearTargeting {
 		}
 	
 	}
-
+	
 }

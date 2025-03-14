@@ -1,0 +1,30 @@
+ configuration delta "WallTracing"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Movement.java>
+		{
+	addClassifierImport(<class:jab.module.Movement>, "jab.module.Module");
+	addClassifierImport(<class:jab.module.Movement>, "robocode.Event");
+	addClassifierImport(<class:jab.module.Movement>, "robocode.HitWallEvent");
+	addMember(<class:jab.module.Movement>, "private double moveAmount;
+");
+	removeMember(<constructor:jab.module.Movement.Movement(Module)>);
+	addMember(<class:jab.module.Movement>, "public Movement(Module bot) {
+			this.bot = bot;
+			this.moveAmount = Math.max(bot.getBattleFieldHeight(), bot.getBattleFieldWidth());
+		}
+");
+	modifyStatementListContainer(<method:jab.module.Movement.move()>, "public void move() {
+			bot.setMaxVelocity(8);
+			bot.turnLeft(bot.getHeading() % 90);
+			bot.setAhead(moveAmount);
+	}
+", "WallTracing", false);
+	addMember(<class:jab.module.Movement>, "public void listen(Event e) {
+			if (e instanceof HitWallEvent) {
+				bot.turnRight(90);
+				bot.setAhead(moveAmount);
+			}
+		}
+");
+	}
+	

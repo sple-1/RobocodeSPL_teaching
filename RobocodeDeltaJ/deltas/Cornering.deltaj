@@ -1,5 +1,5 @@
 delta Cornering {
-
+	
 	modifies jab.module.Movement {
 		
 		adds import jab.module.Module;
@@ -28,5 +28,5 @@ delta Cornering {
 		}
 		
 	}
-
+	
 }

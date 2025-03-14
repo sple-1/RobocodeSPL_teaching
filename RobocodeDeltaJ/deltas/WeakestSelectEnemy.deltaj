@@ -1,5 +1,5 @@
 delta WeakestSelectEnemy {
-
+	
 	modifies jab.module.SelectEnemy {
 	
 		adds import java.util.Iterator;
@@ -20,4 +20,5 @@ delta WeakestSelectEnemy {
 		}
 	
 	}
+	
 }

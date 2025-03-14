@@ -1,5 +1,5 @@
 delta MouseTargeting {
-
+	
 	modifies jab.module.Targeting {
 		 
 		adds import java.awt.Color;
@@ -32,5 +32,5 @@ delta MouseTargeting {
 			g.drawLine(aimX - 4, aimY, aimX + 4, aimY);
 		}
 	}
-
+	
 }

@@ -1,0 +1,13 @@
+ configuration delta "RandomPowerGun"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Gun.java>
+		{
+	addClassifierImport(<class:jab.module.Gun>, "java.util.Random");
+	addMember(<class:jab.module.Gun>, "private Random random = new Random();
+");
+	modifyStatementListContainer(<method:jab.module.Gun.fire()>, "public void fire() {
+			bot.bulletPower= random.nextInt(4);
+	}
+", "RandomPowerGun", false);
+	}
+	
