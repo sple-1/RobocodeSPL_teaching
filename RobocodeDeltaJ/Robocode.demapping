@@ -3,3 +3,13 @@ NoMovement:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+NoFireGun:
+<decore/NoFireGun.decore>
+
+MouseClickGun:
+<decore/MouseClickGun.decore>
+
+MaximumPowerGun:
+<decore/MaximumPowerGun.decore>
+
