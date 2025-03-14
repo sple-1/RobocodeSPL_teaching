@@ -6,6 +6,7 @@
         <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="SpinningRadar"/>
           <features maxCardinality="1" name="MouseRadar"/>
+          <features maxCardinality="1" name="EnemyLockRadar"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Movement">

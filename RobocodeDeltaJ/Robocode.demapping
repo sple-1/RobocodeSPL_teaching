@@ -6,3 +6,6 @@ SpinningRadar:
 
 MouseRadar:
 <decore/MouseRadar.decore>
+
+EnemyLockRadar:
+<decore/EnemyLockRadar.decore>
