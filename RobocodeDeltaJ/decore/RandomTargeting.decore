@@ -1,0 +1,27 @@
+ configuration delta "RandomTargeting"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Targeting.java>
+		{
+	addClassifierImport(<class:jab.module.Targeting>, "java.awt.Color");
+	addClassifierImport(<class:jab.module.Targeting>, "java.awt.Graphics2D");
+	addClassifierImport(<class:jab.module.Targeting>, "java.awt.event.InputEvent");
+	addClassifierImport(<class:jab.module.Targeting>, "java.awt.event.MouseEvent");
+	addClassifierImport(<class:jab.module.Targeting>, "java.util.Random");
+	addClassifierImport(<class:jab.module.Targeting>, "robocode.util.Utils");
+	addClassifierImport(<class:jab.module.Targeting>, "jab.module.Module");
+	addMember(<class:jab.module.Targeting>, "private Random random = new Random();
+");
+	modifyStatementListContainer(<method:jab.module.Targeting.target()>, "public void target() {
+			//Putar senjata ke arah acak
+			double randomAngle = random.nextDouble() * 2 * Math.PI; //Sudut acak dalam radian
+			double gunTurnAngle = Utils.normalRelativeAngle(randomAngle - bot.getGunHeadingRadians());
+			bot.setTurnGunRightRadians(gunTurnAngle);
+	}
+", "RandomTargeting", false);
+	addMember(<class:jab.module.Targeting>, "public void onPaint(Graphics2D g) {
+			g.setColor(Color.ORANGE);
+        	g.drawOval((int) bot.getX() - 50, (int) bot.getY() - 50,100,100);
+		}
+");
+	}
+	
